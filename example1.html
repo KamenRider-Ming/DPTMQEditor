@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DBTMQEditor</title>
+	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/tmq_editor.css">
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/editorcj.js"></script>
+</head>
+<body>
+	<div class="editor-wrap">
+		
+	</div>
+	<button class="btn btn-default">导出数据</button>
+	<div class='show'></div>
+	<script type="text/javascript">
+		var bptmqeditor = new BPTMQeditor($('.editor-wrap'),null);
+		$('.btn').click(function(){
+			$('.show').append(bptmqeditor.getHTMLContent());
+		});
+	</script>
+</body>
+</html>
